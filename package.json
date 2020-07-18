@@ -1,0 +1,39 @@
+{
+  "name": "ts-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd -r tsconfig-paths/register ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.23",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "^2.0.5",
+    "ts-node-dev": "^1.0.0-pre.52",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.7"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": "prettier --write"
+  }
+}
