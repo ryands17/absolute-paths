@@ -1,3 +1,14 @@
+import express from 'express'
 import { add } from '~/utils/helpers'
 
-console.log('sum: ', add(3, 3))
+const app = express()
+
+app.get('/', (_req, res) => {
+  res.json({
+    data: {
+      sum: add(2, 3),
+    },
+  })
+})
+
+app.listen(3000, () => console.log('🚀 server running!'))
